@@ -1,7 +1,7 @@
 component-testing/node_modules
-cypress-e2e-test/node_modules
-cypress-e2e-test/cypress/intergration
-cypress-e2e-test/cypress/screenshots
-cypress-e2e-test/cypress/videos
+cypress-e2e-test-bdd/node_modules
+cypress-e2e-test-bdd/cypress/intergration
+cypress-e2e-test-bdd/cypress/screenshots
+cypress-e2e-test-bdd/cypress/videos
 discord-bot/node_modules
-javascript-for-testers/node_modules
+javascript-voor-testers/node_modules
