@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-single": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a",
+    "test-single": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser electron",
     "pre-test": "node ./bundleFeatureFiles.js",
     "test": "npm run pre-test && cypress run --spec **/*.features --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a && npm run post-test",
     "post-test": "rm cypress/integration/All.features"
