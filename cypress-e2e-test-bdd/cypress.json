@@ -1,5 +1,6 @@
 {
     "projectId": "3myi6d",
+    "runMode": 2,
     "testFiles": "**/*.{feature,features}",
     "video": false,
     "defaultCommandTimeout": 10000,
