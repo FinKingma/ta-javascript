@@ -85,9 +85,45 @@ context('Actions', () => {
         })
     })
 
-    it('Click', () => {
+    xit('Click', () => {
         cy.visit('http://uitestingplayground.com/click')
         cy.get('#badButton').click()
         cy.get('#badButton').should('have.class', 'btn-success')
+    })
+
+    xit('Verify Text', () => {
+        cy.visit('http://uitestingplayground.com/verifytext')
+        cy.get('.bg-primary').contains('Welcome UserName!').should('exist')
+    })
+
+    xit('Mouse Over', () => {
+        cy.visit('http://uitestingplayground.com/mouseover')
+        cy.contains('a', 'Click me').click()
+        cy.contains('a', 'Click me').click()
+        cy.get('#clickCount').should('have.text', '2')
+    })
+
+    xit('Load Delays', () => {
+        cy.visit('http://uitestingplayground.com/loaddelay')
+        cy.get('.btn-primary').click()
+    })
+
+    xit('Text input', () => {
+        cy.visit('http://uitestingplayground.com/textinput')
+        cy.get('#newButtonName').type('SPARTAA')
+        cy.get('#updatingButton').click()
+        cy.get('#updatingButton').should('have.text', 'SPARTAA')
+    })
+
+    xit('Progress Bar', () => {
+        cy.visit('http://uitestingplayground.com/progressbar')
+        cy.get('#startButton').click()
+        cy.get('#progressBar').contains('75%', { timeout: 30000 })
+        cy.get('#stopButton').click()
+    })
+
+    it('Non-Breaking Space', () => {
+        cy.visit('http://uitestingplayground.com/nbsp')
+        cy.contains('button', 'My Button').click()
     })
 })
