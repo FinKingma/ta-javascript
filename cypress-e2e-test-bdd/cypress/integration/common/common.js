@@ -2,7 +2,7 @@ import { Then, When } from "cypress-cucumber-preprocessor/steps";
 
 When('I create a new conference', () => {
   cy.get('a[title="Conferences"]').first().click({force: true})
-  cy.get("div.mx-progress").should("not.be.visible")
+  // cy.get("div.mx-progress").should("not.be.visible")
   cy.get('[data-mendix-id="4.Conference.Conference_Overview.actionButton2"]').click()
   cy.get("div.mx-window-active").should("be.visible")
 })
