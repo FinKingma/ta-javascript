@@ -6,7 +6,7 @@ Feature: Managing the conference
   Scenario: The conference manager can create new conferences
     Given I login on the conference app as a conference manager
     When I create a conference 'My conference 01' with default data
-    Then I should be able to view conferece 'My conference 01'
+    Then I should be able to view conference 'My conference 01'
 
   Scenario: The conference must be between 8 and 22
     Given I login on the conference app as a conference manager

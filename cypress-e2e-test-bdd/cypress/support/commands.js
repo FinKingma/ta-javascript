@@ -26,7 +26,6 @@ Cypress.Commands.add("createConference", (name) => {
     cy.get('div.mx-dataview-content').contains('div.row', 'Start time').find('select').first().select('_9')
     cy.get('div.mx-dataview-content').contains('div.row', 'End time').find('select').first().select('_18')
     cy.get('div.mx-dataview-content').get('.btn-success').click()
-    cy.get("div.mx-window-active").should("not.be.visible")
 })
 //
 //

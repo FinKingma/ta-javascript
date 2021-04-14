@@ -10,7 +10,7 @@ Then('I should not be able to select an end time after 22', () => {
     cy.contains('div.row', 'End time').find('select').first().first().should('not.have.value', '_23')
 })
 
-Then('I should be able to view conferece {string}', (name) => {
+Then('I should be able to view conference {string}', (name) => {
     cy.get('a[title="Conferences"]').first().click({force: true})
     cy.contains('div.mx-grid-content td', name).should('be.visible')
 })

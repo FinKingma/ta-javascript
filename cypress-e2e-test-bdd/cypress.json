@@ -1,4 +1,5 @@
 {
+    "projectId": "3myi6d",
     "testFiles": "**/*.{feature,features}",
     "video": false,
     "defaultCommandTimeout": 10000,
