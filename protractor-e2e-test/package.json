@@ -1,0 +1,16 @@
+{
+  "name": "protractor-e2e-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webdriver": "webdriver-manager start",
+    "test": "protractor conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-spec-reporter": "^7.0.0",
+    "protractor": "^7.0.0"
+  }
+}

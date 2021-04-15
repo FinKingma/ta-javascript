@@ -9,3 +9,4 @@ cypress-e2e-test-bdd/cypress/screenshots
 cypress-e2e-test-bdd/cypress/videos
 discord-bot/node_modules
 javascript-voor-testers/node_modules
+protractor-e2e-test/node_modules
