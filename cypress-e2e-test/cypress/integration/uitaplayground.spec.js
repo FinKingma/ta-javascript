@@ -1,4 +1,4 @@
-context('Actions', () => {
+context('UI Test automation playground', () => {
 
     xit('Dynamic ID', () => {
         cy.visit('http://uitestingplayground.com/dynamicid')
