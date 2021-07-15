@@ -7,6 +7,8 @@ cypress-e2e-test-bdd/node_modules
 cypress-e2e-test-bdd/cypress/intergration
 cypress-e2e-test-bdd/cypress/screenshots
 cypress-e2e-test-bdd/cypress/videos
+cypress-e2e-test-bdd/cypress/report
+cypress-e2e-test-bdd/cypress/cucumber-json
 discord-bot/node_modules
 javascript-voor-testers/node_modules
 protractor-e2e-test/node_modules

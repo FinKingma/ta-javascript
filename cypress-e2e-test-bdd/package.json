@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "debug": "cypress open",
-    "test": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser electron",
+    "test": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser chrome",
     "pre-test": "node ./bundleFeatureFiles.js",
-    "test-bundled": "npm run pre-test && cypress run --spec **/*.features --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a",
+    "test-bundled": "npm run pre-test && cypress run --spec **/*.features --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,13 @@
     "cypress-cucumber-preprocessor": "^3.0.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "devDependencies": {
     "cypress-sql-server": "^1.0.0",

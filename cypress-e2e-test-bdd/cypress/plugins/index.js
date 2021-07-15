@@ -37,11 +37,46 @@ function queryTestDb(query, config) {
 
 const downloadDirectory = path.join(__dirname, '..', 'downloads');
 
+const report = require('multiple-cucumber-html-reporter');
+
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
+
+  on('before:run', (results) => {
+    fs.rmdirSync("cypress/cucumber-json", { recursive: true });
+    fs.rmdirSync("cypress/report", { recursive: true });
+  })
+
+  on('after:run', (results) => {
+    report.generate({
+      jsonDir: './cypress/cucumber-json/',
+      reportPath: './cypress/report/',
+      metadata:{
+            browser: {
+                name: results.browserName,
+                version: results.browserVersion
+            },
+            device: 'Local test machine',
+            platform: {
+                name: results.osName,
+                version: results.osVersion
+            }
+        },
+        customData: {
+            title: 'Run info',
+            data: [
+                {label: 'Project', value: 'Custom project'},
+                {label: 'Release', value: '1.2.3'},
+                {label: 'Cycle', value: 'B11221.34321'},
+                {label: 'Execution Start Time', value: results.startedTestsAt},
+                {label: 'Execution End Time', value: results.endedTestsAt}
+            ]
+        }
+    });
+  })
 
   on('task', {
     isFileDownloadedWith(text, ms = 4000) {
