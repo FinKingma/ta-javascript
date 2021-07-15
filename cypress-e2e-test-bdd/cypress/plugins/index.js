@@ -51,6 +51,7 @@ module.exports = (on, config) => {
   })
 
   on('after:run', (results) => {
+    console.log('done..', results.osName);
     report.generate({
       jsonDir: './cypress/cucumber-json/',
       reportPath: './cypress/report/',
@@ -59,7 +60,7 @@ module.exports = (on, config) => {
                 name: results.browserName,
                 version: results.browserVersion
             },
-            device: 'Local test machine',
+            device: 'Localhost',
             platform: {
                 name: results.osName,
                 version: results.osVersion
