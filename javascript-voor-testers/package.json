@@ -12,5 +12,8 @@
     "test": "jest"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "diff-js-xml": "^1.0.6"
+  }
 }
