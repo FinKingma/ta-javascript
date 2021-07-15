@@ -5,6 +5,13 @@ var newFile = 'All.features'
 let fileContent = ''
 let featureFilenames = []
 
+try {
+    fs.unlinkSync(rootDir + newFile)
+    //file removed
+} catch(err) {
+    console.log('All.features was not found')
+}
+
 let files = fs.readdirSync(rootDir)
 
 for (var i=0;i<files.length;i++) {

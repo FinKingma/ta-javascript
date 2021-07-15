@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-single": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser electron",
+    "debug": "cypress open",
+    "test": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser electron",
     "pre-test": "node ./bundleFeatureFiles.js",
-    "test": "npm run pre-test && cypress run --spec **/*.features --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a && npm run post-test",
-    "post-test": "rm cypress/integration/All.features"
+    "test-bundled": "npm run pre-test && cypress run --spec **/*.features --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a",
   },
-
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/javascript-test-automation/cypress.git"
@@ -31,6 +30,8 @@
     "cypress-sql-server": "^1.0.0",
     "fs": "0.0.1-security",
     "install": "^0.13.0",
+    "mocha": "^9.0.2",
+    "multiple-cucumber-html-reporter": "^1.18.0",
     "mysql": "^2.18.1",
     "node-xlsx": "^0.16.1",
     "npm": "^6.14.8",

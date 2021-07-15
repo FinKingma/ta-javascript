@@ -1,22 +1,22 @@
 context('UI Test automation playground', () => {
 
-    xit('Dynamic ID', () => {
+    it('Dynamic ID', () => {
         cy.visit('http://uitestingplayground.com/dynamicid')
         cy.get('.btn-primary').click()
     })
 
-    xit('AJAX Data', () => {
+    it('AJAX Data', () => {
         cy.visit('http://uitestingplayground.com/ajax')
         cy.get('#ajaxButton').click()
         cy.get('.bg-success', { timeout: 30000 }).should('have.text', 'Data loaded with AJAX get request.')
     })
 
-    xit('Scrollbars', () => {
+    it('Scrollbars', () => {
         cy.visit('http://uitestingplayground.com/scrollbars')
         cy.get('#hidingButton').click()
     })
 
-    xit('Visibility', () => {
+    it('Visibility', () => {
         cy.visit('http://uitestingplayground.com/visibility')
         cy.get('#hideButton').click()
         cy.get('#removedButton').should('not.exist');
@@ -39,20 +39,20 @@ context('UI Test automation playground', () => {
         });
     })
 
-    xit('Class Attribute', () => {
+    it('Class Attribute', () => {
         cy.visit('http://uitestingplayground.com/classattr')
         cy.get('.btn-primary').click()
         cy.on('window:confirm', () => true);
     })
 
-    xit('Client Side Delay', () => {
+    it('Client Side Delay', () => {
         cy.visit('http://uitestingplayground.com/clientdelay')
         cy.get('#ajaxButton').click()
         cy.get('.bg-success', { timeout: 30000 }).should('have.text', 'Data calculated on the client side.')
         cy.get('.bg-success').click()
     })
 
-    xit('Dynamic Table', () => {
+    it('Dynamic Table', () => {
         cy.visit('http://uitestingplayground.com/dynamictable')
         let chromePercentage
         cy.get('div[role="table"]').contains('div[role="row"]', 'Chrome').contains('span[role="cell"]', '%').then(($el) => {
@@ -61,7 +61,7 @@ context('UI Test automation playground', () => {
         })
     })
 
-    xit('Sample App', () => {
+    it('Sample App', () => {
         cy.visit('http://uitestingplayground.com/sampleapp')
         cy.get('input[name="UserName"]').type('Fin')
         cy.get('input[name="Password"]').type('pwd')
@@ -69,7 +69,7 @@ context('UI Test automation playground', () => {
         cy.get('#loginstatus').should('contain', 'Welcome, Fin!')
     })
 
-    xit('Hidden Layers', (done) => {
+    it('Hidden Layers', (done) => {
         cy.visit('http://uitestingplayground.com/hiddenlayers')
         cy.get('#greenButton').click();
         cy.get('#blueButton').should('be.visible')
@@ -85,37 +85,37 @@ context('UI Test automation playground', () => {
         })
     })
 
-    xit('Click', () => {
+    it('Click', () => {
         cy.visit('http://uitestingplayground.com/click')
         cy.get('#badButton').click()
         cy.get('#badButton').should('have.class', 'btn-success')
     })
 
-    xit('Verify Text', () => {
+    it('Verify Text', () => {
         cy.visit('http://uitestingplayground.com/verifytext')
         cy.get('.bg-primary').contains('Welcome UserName!').should('exist')
     })
 
-    xit('Mouse Over', () => {
+    it('Mouse Over', () => {
         cy.visit('http://uitestingplayground.com/mouseover')
         cy.contains('a', 'Click me').click()
         cy.contains('a', 'Click me').click()
         cy.get('#clickCount').should('have.text', '2')
     })
 
-    xit('Load Delays', () => {
+    it('Load Delays', () => {
         cy.visit('http://uitestingplayground.com/loaddelay')
         cy.get('.btn-primary').click()
     })
 
-    xit('Text input', () => {
+    it('Text input', () => {
         cy.visit('http://uitestingplayground.com/textinput')
         cy.get('#newButtonName').type('SPARTAA')
         cy.get('#updatingButton').click()
         cy.get('#updatingButton').should('have.text', 'SPARTAA')
     })
 
-    xit('Progress Bar', () => {
+    it('Progress Bar', () => {
         cy.visit('http://uitestingplayground.com/progressbar')
         cy.get('#startButton').click()
         cy.get('#progressBar').contains('75%', { timeout: 30000 })
