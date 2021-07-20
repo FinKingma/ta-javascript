@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "clean": "kill $(lsof -t -i :3000)",
-    "test": "(npm run start & (sleep 1 && mocha)) && npm run clean"
+    "test": "(npm run start & (sleep 1 && mocha)) && npm run clean",
+    "mocha": "npx mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

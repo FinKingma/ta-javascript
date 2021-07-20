@@ -2,7 +2,7 @@
 <AWA2020 xmlns="http://xml.belastingdienst.nl/schemas/AWA/2020/01" Version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.belastingdienst.nl/schemas/AWA/2020/01">
     <Berichtgegevens>
         <IdentNrAangever>111111110</IdentNrAangever>
-        <AangifteBelastingjaar>2020</AangifteBelastingjaar>
+        <AangifteBelastingjaar>2021</AangifteBelastingjaar>
         <LevCode>abcd</LevCode>
         <RelatienrSWO>12345678</RelatienrSWO>
         <NaamApplicatie>AWI test_awi_2020-2</NaamApplicatie>

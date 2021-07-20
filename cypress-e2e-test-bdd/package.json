@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "debug": "cypress open",
-    "test": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser chrome",
+    "test": "cypress run --spec **/*.feature --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a --browser chrome --headless",
     "pre-test": "node ./bundleFeatureFiles.js",
     "test-bundled": "npm run pre-test && cypress run --spec **/*.features --record --key d4aa3720-61fb-4e2d-aa07-772954fb5d6a"
   },
