@@ -31,6 +31,9 @@ module.exports = (on, config) => {
   })
 
   on('task', {
+    canSum(array) {
+      return 4
+    },
     isFileDownloadedWith(text, ms = 4000) {
       return isFileDownloadedWith(text, ms)
     },

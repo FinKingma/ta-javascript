@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "cy:parallel": "cypress-parallel -s cy:run -t 4",
+    "cy:run": "cypress run --record --key 2d82754f-d0c6-4c93-9f7c-645e5cb98b4b"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^7.1.0"
+  },
+  "devDependencies": {
+    "cypress-parallel": "^0.3.0"
   }
 }
