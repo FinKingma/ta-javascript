@@ -10,7 +10,7 @@
 
 const fs = require('fs');
 
-const { setupReport } = require('./cucumber-report')
+const { setupReport } = require('./cucumberUtil')
 const { queryTestDb } = require('./dbUtil')
 const { isFileDownloadedWith } = require('./fileUtil')
 
