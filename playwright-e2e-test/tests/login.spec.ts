@@ -1,4 +1,4 @@
-import { test, expect } from '../playwright-fixtures';
+import { test, expect } from '../utils/playwright-fixtures';
 
 test('I can log in on the hotel app', async ({ page, commands }) => {
   await page.goto('http://adactinhotelapp.com/index.php');
