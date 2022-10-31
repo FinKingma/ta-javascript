@@ -9,6 +9,19 @@ Feature: Authorization
     Then I should land on the dashboard
 
 
+Feature: Database
+  
+  Scenario: I can run queries against a database
+    Then I can run a database query to retrieve data
+
+
+Feature: Download
+  
+  Scenario: I can validate the content of a downloaded file
+    When I download the yaml file from learning container
+    Then I should be able to validate the file contains 'Dulce'
+
+
 Feature: Managing the conference
   As a conference organizer
   I want to be able to create new conferences
