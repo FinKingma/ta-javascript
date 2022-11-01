@@ -33,10 +33,10 @@ test.describe('UI Test automation playground', () => {
       try {
         await page.locator(id).click({trial:true, timeout:500})
       } catch(msg) {
-        console.log(`error for: ${id}`);
+        // console.log(`error for: ${id}`);
         error = true;
       } finally {
-        console.log(`${id} triggered error: ${error}`);
+        // console.log(`${id} triggered error: ${error}`);
         expect(error).toBeTruthy();
       }
     }
