@@ -11,8 +11,8 @@
 const fs = require('fs');
 
 const { setupReport } = require('./cucumberUtil')
-const { queryTestDb } = require('./dbUtil')
-const { isFileDownloadedWith } = require('./fileUtil')
+// const { queryTestDb } = require('./dbUtil')
+// const { isFileDownloadedWith } = require('./fileUtil')
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
@@ -20,12 +20,12 @@ const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 
-  on('before:run', (results) => {
+  on('before:browser:launch', (results) => {
     fs.rmdirSync("cypress/cucumber-json", { recursive: true });
     fs.rmdirSync("cypress/report", { recursive: true });
   })
 
-  on('after:run', (results) => {
+  on('after:screenshot', (results) => {
     console.log('done..');
     setupReport(results);
   })

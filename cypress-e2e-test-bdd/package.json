@@ -20,19 +20,13 @@
   },
   "homepage": "https://gitlab.com/javascript-test-automation/cypress#readme",
   "dependencies": {
-    "cypress": "^5.3.0",
-    "cypress-cucumber-preprocessor": "^3.0.0"
+    "cypress": "^11.0.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/cucumber-json",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    }
+    "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-sql-server": "^1.0.0",
     "fs": "0.0.1-security",
     "install": "^0.13.0",

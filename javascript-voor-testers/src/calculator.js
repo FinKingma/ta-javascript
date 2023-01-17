@@ -9,7 +9,7 @@ class Calculator {
     sum(input) {
         let result = 0;
         for (let num of input) {
-            result += +num;
+            result = result + +num;
         }
         return result;
     }

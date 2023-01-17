@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "fs": "0.0.1-security",
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "path": "^0.12.7",
+    "ts-node": "^10.9.1"
   },
   "scripts": {
     "calc": "node index.js",
-    "test": "jest"
+    "test": "jest",
+    "calc-ts": "ts-node index.ts"
   },
   "author": "",
   "license": "ISC",
