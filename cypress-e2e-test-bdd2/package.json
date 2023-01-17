@@ -6,8 +6,12 @@
   "scripts": {
     "test": "cypress run"
   },
-  "@badeball/cypress-cucumber-preprocessor": {
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
     "html": {
+      "enabled": true
+    },
+    "json": {
       "enabled": true
     }
   },

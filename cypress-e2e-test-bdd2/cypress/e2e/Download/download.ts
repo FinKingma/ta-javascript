@@ -3,7 +3,7 @@ import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
 When('I download the yaml file from learning container', () => {
     cy.intercept('GET', 'url').as('download')
     cy.visit('https://file-examples.com/index.php/sample-documents-download/sample-xls-download/')
-    cy.contains('tr', 'Download sample xlsx file').eq(1).click();
+    cy.contains('a', 'Download sample xlsx file').click();
     cy.wait(2000);
 })
 
